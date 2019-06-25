@@ -6,19 +6,18 @@ soundDeviceId := 9 ;9 was my mic id number.
 
 ;==============================================
 ;Toggle mic mute 
+;toggles mute mic, shows a tool tip and sets a tray icon accordingly. 
 ;https://autohotkey.com/boards/viewtopic.php?t=15509
-;Pause::  ;Pause Break button is my chosen hotkey
 #MButton:: ;windows + mouse3
-
 
 SoundSet, +1, MASTER, mute,soundDeviceId 
 SoundGet, master_mute, , mute, soundDeviceId
 ToolTip, Mute %master_mute% ;use a tool tip at mouse pointer to show what state mic is after toggle
 SetTimer, RemoveToolTip,1000
 if (master_mute == "On") {
-    Menu, Tray, Icon, shell32.dll, 110,1
+    Menu, Tray, Icon, shell32.dll, 110,1 ;red cross
 } else {
-    Menu, Tray, Icon, shell32.dll, 1,1
+    Menu, Tray, Icon, shell32.dll, 1,1 ; white paper
 }
 return
 
