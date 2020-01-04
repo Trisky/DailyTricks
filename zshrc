@@ -13,3 +13,16 @@ alias nis="npm install --save"
 alias tailMongoLog="tail -f /usr/local/var/log/mongodb/mongo.log"
 #directory size
 alias cuantoocupa="du -shc *"
+
+
+#set lat and long to all jpg files in the current folder.
+#Requires exiftool
+setexifgeo() {
+
+    if [ -z "$1" || -z "$2" ]
+	then
+	      echo latitude or longitude are empty
+	      return
+	fi
+    exiftool -GPSLatitude=$1 -GPSLongitude=$2 *.JPG
+}
