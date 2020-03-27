@@ -13,10 +13,6 @@ alias sqlstop='brew services stop mysql@5.7'
 alias zshreload="source ~/.zshrc"
 #alias tailMongoLog="tail -f /usr/local/var/log/mongodb/mongo.log"
 alias cuantoocupa="du -shc *"
-alias sshprod="ssh sebastian@10.10.10.76" #website3
-alias sshprod2="ssh sebastian@10.10.20.198" #website4
-alias sshstage="ssh ubuntu@10.10.100.183" #staging new website
-alias sshacc="ssh ubuntu@10.10.100.140" #acc DOF
 ZSH_THEME="agnoster"
 
 POWERLEVEL9K_MODE="awesome-patched"
