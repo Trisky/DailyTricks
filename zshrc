@@ -1,6 +1,7 @@
 source $ZSH/oh-my-zsh.sh
 
-
+alias espacio='du -ksh *'
+alias refreshalias='source ~/.bash_profile'
 alias httpserver='python -m SimpleHTTPServer 8000'
 alias wgettest='wget http://sftp.fibertel.com.ar/services/file-1GB.img'
 alias decir='say -v juan'
